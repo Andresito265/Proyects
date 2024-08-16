@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html languaje="es">
+<head>
+    <meta charset="utf-8">
+    <title>Pasos & Huellas</title>
+    <link rel="stylesheet" href="../CSS/EstiloBaseDatos.css">
+</head>
+<body>
+    <div id="header">
+        <img class="logo" src="../IMG/fondo1.png" alt="logo">
+        <ul class="nav">
+            <li><a href="../Principal.html">Principal</a></li>
+            <li><a href="cargo.html">Cargo</a>
+                <ul>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                </ul>
+            </li>
+            <li><a href="productosbd.html">Productos</a>
+                <ul>
+                    <li><a href="provedores.html">Provedores</a></li>
+                    <li><a href="nomina.html">nomina</a></li>
+                </ul>
+            </li>
+            <li><a href="despachos.html">Despachos</a>
+            <ul>
+                <li><a href="facturacabeza.html">Factura cabeza</a></li>
+                <li><a href="facturadetalle.html">Factura detalle</a></li>
+                <li><a href="pedido_cabeza.html">Pedido Cabeza</a></li>
+                <li><a href="pedido_detalle.html">Pedido detalle</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section class="contenedor_despachos">
+            <br>
+            <br>
+            <h2 class="conte_titulo"> PRODUCTOS</h2>
+            <br>
+            <br>
+            <form action="../include/insertarproductos.php" method="POST">
+                <table>
+                    <tr>
+                        <th colspan="5">
+                            <label class="accion" for="opcion">Elija lo que desea hacer</label>
+                            <select name="opcion">
+                                <option value="insertar">Insertar producto</option>
+                                <option value="eliminar">Eliminar producto</option>
+                                <option value="actualizar">Actualizar producto</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="3"> Ingrese el codigo del producto<input name="cod"  type="number" required></td>
+                        <td > Ingrese el codigo del proveedor<input name="pro"  type="number" required></td>
+                    </tr>    
+                    <tr>
+                        <td colspan="3">Ingrese el tipo de producto<select name="tip" required>
+                            <option value="dama">Dama</option>
+                            <option value="caballero">Caballero</option>
+                            <option value="infantil">Infantil</option>
+                        </td>
+                        <td colspan="3"> Ingrese la linea de producto<select name="linea" required>
+                            <option value="formal">Formal</option>
+                            <option value="informal">Informal</option>
+                        </td>
+                        <tr>
+                            <td colspan="3">Ingrese la referencia del producto<input name="refere" type="text"></td>
+                            <td>Descripcion<textarea name="descrip" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Ingrese la talla<select name="talla" required>
+                                <option value="1">28</option>
+                                <option value="2">29</option>
+                                <option value="3">30</option>
+                                <option value="4">31</option>
+                                <option value="5">32</option>
+                                <option value="6">33</option>
+                                <option value="7">34</option>
+                                <option value="8">35</option>
+                                <option value="9">36</option>
+                                <option value="10">37</option>
+                                <option value="11">38</option>
+                                <option value="12">39</option>
+                                <option value="13">40</option>
+                                <option value="14">41</option>
+                                <option value="15">42</option>                                        
+                            </select></td>
+                            <td colspan="3">Ingrese la cantidad<input name="can" type="number" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Ingrese el precio compra<input name="com" type="number" required>
+                            </td>
+                            <td> 
+                                Ingrese el precio venta<input name="ven" type="number" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><input class="button" type="submit" value="REGISTRAR"></td>
+                            <td colspan="2"><input class="button" type="reset" value="Borrar"></td>
+                        </tr>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="js/script.js"></script>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../IMG/fondo1.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <p>Nos puedes encontrar en: Cl. 18 #9-87 Tunja, Boyacá.</p>
+            </div>
+            <div>
+                <h2>CONTACTANOS</h2>
+                <div class="red-social">
+                    <a href="../include/FormularioDeContacto.php"><img src="../IMG/Contacto.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Juan Sarmiento / Andres Samaca / Andres Vargas </b> PD-PHP / Incap</small>
+        </div>
+    </footer>
+</body>
+</html>

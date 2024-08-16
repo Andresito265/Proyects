@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html languaje="es">
+<head>
+    <meta charset="utf-8">
+    <title>Pasos & Huellas</title>
+    <link rel="stylesheet" href="../CSS/EstiloBaseDatos.css">
+</head>
+<body>
+    <div id="header">
+        <img class="logo" src="../IMG/fondo1.png" alt="logo">
+        <ul class="nav">
+            <li><a href="../Principal.html">Principal</a></li>
+            <li><a href="cargo.html">Cargo</a>
+                <ul>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                </ul>
+            </li>
+            <li><a href="productosbd.html">Productos</a>
+                <ul>
+                    <li><a href="provedores.html">Provedores</a></li>
+                    <li><a href="nomina.html">nomina</a></li>
+                </ul>
+            </li>
+            <li><a href="despachos.html">Despachos</a>
+            <ul>
+                <li><a href="facturacabeza.html">Factura cabeza</a></li>
+                <li><a href="facturadetalle.html">Factura detalle</a></li>
+                <li><a href="pedido_cabeza.html">Pedido Cabeza</a></li>
+                <li><a href="pedido_detalle.html">Pedido detalle</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section class="contenedor_despachos">
+            <h2 class="conte_titulo">CARGO</h2>
+            <form action="../include/insertarcargo.php" method="POST">
+                <table>
+                    <tr>
+                        <th colspan="2">
+                            <label class="accion" for="opcion">Elija lo que desea hacer</label>
+                            <select name="opcion">
+                                <option value="insertar">Insertar cargo</option>
+                                <option value="eliminar">Eliminar registros</option>
+                                <option value="actualizar">Actualizar cargo</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label for="car"> Ingrese codigo de cargo</label><input name="car"  type="text" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label for="nomb"> Ingrese su nombre</label><input name="nomb" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label for="sal"> Ingrese su salario</label><input name="sal" type="text"  ></td>
+                    <tr>
+                        <td colspan="2"><label for="desc"> Ingrese la descripcion del cargo</label><input name="desc" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <td><input class="button" type="submit" value="REGISTRAR"></td>
+                        <td><input class="button" type="reset" value="Borrar"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="js/script.js"></script>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../IMG/fondo1.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <p>Nos puedes encontrar en: Cl. 18 #9-87 Tunja, Boyacá.</p>
+            </div>
+            <div>
+                <h2>CONTACTANOS</h2>
+                <div class="red-social">
+                    <a href="../include/FormularioDeContacto.php"><img src="../IMG/Contacto.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Juan Sarmiento / Andres Samaca / Andres Vargas </b> PD-PHP / Incap</small>
+        </div>
+    </footer>
+</body>
+</html>

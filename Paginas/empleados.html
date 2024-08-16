@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html languaje="es">
+<head>
+    <meta charset="utf-8">
+    <title>Pasos & Huellas</title>
+    <link rel="stylesheet" href="../CSS/EstiloBaseDatos.css">
+</head>
+<body>
+    <div id="header">
+        <img class="logo" src="../IMG/fondo1.png" alt="logo">
+        <ul class="nav">
+            <li><a href="../Principal.html">Principal</a></li>
+            <li><a href="cargo.html">Cargo</a>
+                <ul>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                </ul>
+            </li>
+            <li><a href="productosbd.html">Productos</a>
+                <ul>
+                    <li><a href="provedores.html">Provedores</a></li>
+                    <li><a href="nomina.html">nomina</a></li>
+                </ul>
+            </li>
+            <li><a href="despachos.html">Despachos</a>
+            <ul>
+                <li><a href="facturacabeza.html">Factura cabeza</a></li>
+                <li><a href="facturadetalle.html">Factura detalle</a></li>
+                <li><a href="pedido_cabeza.html">Pedido Cabeza</a></li>
+                <li><a href="pedido_detalle.html">Pedido detalle</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section class="contenedor_empleados">
+            <br>
+            <br>
+            <h2 class="conte_titulo">EMPLEADO</h2>
+            <br>
+            <br>
+            <form class="formulario" action="../include/insertarempleados.php" method="POST">
+                <table>
+                    <tr>
+                        <th colspan="3">
+                            <label for="opcion">Elija lo que desee hacer</label>
+                            <select name="opcion">
+                                <option value="insertar">Insertar empleado</option>
+                                <option value="listar">Ver empleados</option>
+                                <option value="actualizar">Actualizar empleados</option>
+                                <option value="eliminar">Eliminar registros</option>
+                            </select>
+                        </th>
+                        <td><label for="cod">Ingrese el codigo del empleado</label><input name="cod" type="number" placeholder="codigo"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nombre1"> Ingrese su primer nombre</label><input name="nombre1"  type="text" placeholder="Nombre 1"></td>
+                        <td><label for="nombre2"> Ingrese su segundo nombre</label><input name="nombre2" type="text" placeholder="Nombre 2"</td>
+                        <td><label for="apellido1"> Ingrese su primer apelido</label><input name="apellido1" type="text" placeholder="apellido 1"></td>
+                        <td><label for="apellido2"> Ingrese su segundo apellido</label><input name="apellido2" type="text" placeholder="apellido2" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="estado">Seleccione su estado civil<select name="estado" >
+                            <option value="Soltero">Soltero</option>
+                            <option value="Casado">Casado</option>
+                            <option value="Union libre">Union libre</option>
+                            <option value="Separado">Separado</option>
+                            <option value="Viudo">Viudo</option>
+                        </select>
+                        </td>
+                        <td><label for="sexo">Seleccione su sexo</label><select name="sexo" >
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                    </td>
+                    <td><label for="estudios">Selecione su nivel de estudios<select name="estudios" >
+                        <option value="Primaria">Primaria</option>
+                        <option value="Segundaria">Segundaria</option>
+                        <option value="Tecnico">Tecnico</option>
+                        <option value="Universitario">Universitario</option>
+                        <option value="Ninguno">Ninguno</option>
+                    </select>
+                    </td>
+                    <td><label for="rh">Seleccione su tipo de sangre<select name="rh" >
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><label for="eps">Seleccione su eps<select name="eps" >
+                            <option value="Nueva eps">Nueva eps</option>
+                            <option value="Salud Total">Salud Total</option>
+                            <option value="Compensar">Compensar</option>
+                            <option value="Sanitas">Sanitas</option>
+                            <option value="Sisben">Sisben</option>
+                        </select>
+                        </td>
+                        <td colspan="2"><label for="pension">Seleccione su entidad pensionaria</label><select name="pension" >
+                            <option value="Colpensiones">Colpensiones</option> 
+                            <option value="Porvenir">Porvenir</option>  
+                        </select>
+                    </td>
+                    <td colspan="2"><label for="arl">Seleccione su empresa de seguros</label><select name="arl">
+                        <option value="Sura">Sura</option>
+                        <option value="Colpatria">Colpatria</option>
+                        <option value="Seguros Bolivar">Seguros Bolivar</option>
+                        <option value="Colmena">Colmena</option>
+                    </select>
+                    </td>
+                    <tr>
+                        <td><label for="tipod">Seleccione su tipo de documento</label><select name="tipdoc">
+                            <option value="CC">CC</option>
+                            <option value="CE">CE</option>
+                            <option value="NIT">NIT</option>
+                            <option value="RUT">RUT</option>
+                        </select>
+                        </td>
+                        <td><label for="no_documento">Ingrese su numero de documento</label><input name="nodoc" type="text" placeholder="Numero" ></td>
+                        <td><label for="direccion">Ingrese su direccion</label><input name="direc" type="text" placeholder="Direccion"></td>
+                        <td><label for="telefono">Ingrese su telefono celular</label><input name="tel" type="text" placeholder="Telefono"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="correo">Ingrese su correo</label><input name="correo" type="text" placeholder="correo" ></td>
+                        <td><label for="codc"> Ingrese el codigo del cargo</label><input name="codc" type="text" placeholder="codigo del cargo" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class="button" type="submit" value="Registrar"></td>
+                        <td colspan="2"><input class="button" type="reset" value="Borrar"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="js/script.js"></script>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../IMG/fondo1.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <p>Nos puedes encontrar en: Cl. 18 #9-87 Tunja, Boyacá.</p>
+            </div>
+            <div>
+                <h2>CONTACTANOS</h2>
+                <div class="red-social">
+                    <a href="../include/FormularioDeContacto.php"><img src="../IMG/Contacto.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Juan Sarmiento / Andres Samaca / Andres Vargas </b> PD-PHP / Incap</small>
+        </div>
+    </footer>
+</body>
+</html>

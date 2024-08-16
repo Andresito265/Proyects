@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html languaje="es">
+<head>
+    <meta charset="utf-8">
+    <title>Pasos & Huellas</title>
+    <link rel="stylesheet" href="../CSS/EstiloBaseDatos.css">
+</head>
+<body>
+    <div id="header">
+        <img class="logo" src="../IMG/fondo1.png" alt="logo">
+        <ul class="nav">
+            <li><a href="../Principal.html">Principal</a></li>
+            <li><a href="cargo.html">Cargo</a>
+                <ul>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                </ul>
+            </li>
+            <li><a href="productosbd.html">Productos</a>
+                <ul>
+                    <li><a href="provedores.html">Provedores</a></li>
+                    <li><a href="nomina.html">nomina</a></li>
+                </ul>
+            </li>
+            <li><a href="despachos.html">Despachos</a>
+            <ul>
+                <li><a href="facturacabeza.html">Factura cabeza</a></li>
+                <li><a href="facturadetalle.html">Factura detalle</a></li>
+                <li><a href="pedido_cabeza.html">Pedido Cabeza</a></li>
+                <li><a href="pedido_detalle.html">Pedido detalle</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section class="contenedor_despachos">
+            <br>
+            <br>
+            <h2 class="conte_titulo"> CLIENTES</h2>
+            <br>
+            <br>
+            <form form action="../include/insertarclientes.php" method="POST">
+                <table>
+                    <tr>
+                        <th colspan="4">
+                            <label for="opcion">Elija lo que desea hacer</label>
+                            <select name="opcion">
+                            <option value="insertar">Insertar cliente</option>
+                            <option value="eliminar">Eliminar registros</option>
+                            <option value="actualizar">Actualizar cliente</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td> Ingrese el codigo<input name="cod" type="number"></td>
+                        <td> Ingrese su primer nombre<input name="nom1"  type="text" ></td>
+                    </tr>
+                    <tr>
+                        <td> Ingrese su segundo nombre<input name="nom2" type="text" ></td>
+                        <td> Ingrese su primer apelido<input name="ape1" type="text" ></td>
+                    </tr> 
+                        <td> Ingrese su segundo apellido<input name="ape2" type="text"  ></td>  
+                        <td> Ingrese su correo electronico<input name="correo" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <td>Ingrese su tipo documento<select name="tipdoc" >
+                            <option value="CC">CC</option>
+                            <option value="CC">CE</option>
+                            <option value="CC">NIT</option>
+                            <option value="CC">RUT</option>
+                            </select>
+                        </td>
+                        <td>Ingrese su numero de documento<input name="nodoc" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <td>Ingrese su numero de telefono<input name="tel" type="text" ></td>
+                        <td>Ingrese su direccion<input name="direc" type="text" ></td>
+                        </select>
+                    </tr>
+                    <tr>
+                        <td><input class="button" type="submit" value="REGISTRAR"></td>
+                        <td colspan="2"><input class="button" type="reset" value="Borrar"></td>
+                </table>
+            </form>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="js/script.js"></script>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../IMG/fondo1.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <p>Nos puedes encontrar en: Cl. 18 #9-87 Tunja, Boyacá.</p>
+            </div>
+            <div>
+                <h2>CONTACTANOS</h2>
+                <div class="red-social">
+                    <a href="../include/FormularioDeContacto.php"><img src="../IMG/Contacto.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Juan Sarmiento / Andres Samaca / Andres Vargas </b> PD-PHP / Incap</small>
+        </div>
+    </footer>
+</body>
+</html>

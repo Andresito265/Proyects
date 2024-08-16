@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html languaje="es">
+<head>
+    <meta charset="utf-8">
+    <title>Pasos & Huellas</title>
+    <link rel="stylesheet" href="../CSS/EstiloBaseDatos.css">
+</head>
+<body>
+    <div id="header">
+        <img class="logo" src="../IMG/fondo1.png" alt="logo">
+        <ul class="nav">
+            <li><a href="../Principal.html">Principal</a></li>
+            <li><a href="cargo.html">Cargo</a>
+                <ul>
+                    <li><a href="empleados.html">Empleados</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                </ul>
+            </li>
+            <li><a href="productosbd.html">Productos</a>
+                <ul>
+                    <li><a href="provedores.html">Provedores</a></li>
+                    <li><a href="nomina.html">nomina</a></li>
+                </ul>
+            </li>
+            <li><a href="despachos.html">Despachos</a>
+            <ul>
+                <li><a href="facturacabeza.html">Factura cabeza</a></li>
+                <li><a href="facturadetalle.html">Factura detalle</a></li>
+                <li><a href="pedido_cabeza.html">Pedido Cabeza</a></li>
+                <li><a href="pedido_detalle.html">Pedido detalle</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section class="contenedor_nomina">
+            <h2 class="conte_titulo">Calcular nomina</h2>
+            <form class="formulario" action="../include/nomina.php" method="POST">
+                <table>
+                    <tr>
+                        <th colspan="2">
+                            <label class="label_nomina" for="opcion">Elija lo que desee hacer</label>
+                            <select name="opcion">
+                                <option value="insertar">Insertar nomina</option>
+                                <option value="Buscar">buscar empleado</option>
+                                <option value="listar">Ver nomina</option>
+                                <option value="actualizar">Actualizar nomina</option>
+                                <option value="eliminar">Eliminar nomina</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><label for="cod_e"> Ingrese el codigo del empleado</label><input name="cod_e"  type="number" placeholder="Codigo"></td>
+                        <td><label for="fecha_p"> Ingrese la fecha de pago</label><input name="fecha_p" type="date" placeholder="Fecha"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="auxilio_t"> Auxilio de trasporte</label><input name="auxilio_t" type="number" placeholder="Auxilio"></td>
+                        <td><label for="comi-otros">Comisiones u otros</label><input name="comi-otros" type="number" placeholder="Comisiones"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="no_horas_ex">Ingrese las horas extra trabajadas</label><input name="no_horas_ex" type="number"></td>
+                        <td><label for="tipo_ho">Seleccione el tipo de horas que trabajo</label><select name="tipo_ho">
+                            <option value="Diurnas">Diurnas</option>
+                            <option value="Nocturnas">Nocturnas</option>
+                            <option value="Dominicales">Dominicales</option>
+                            <option value="Festivos">Festivos</option>
+                        </select>
+                    </tr>
+                        </td>
+                        <td><label for="to_horas_ex">Valor total de las horas extra</label><input name="to_horas_ex" type="number"></td>
+                        <td><label for="dias">Dias trabajados</label><input name="dias" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="total_devengado">Total devengado</label><input name="total_devengado" type="number"></td>
+                        <td><label for="salud">Salud</label><input name="salud" type="number"></td>
+                    </tr>
+                        <td><label for="pension">Pension</label><input name="pension" type="number"></td>
+                        <td><label for="prestamos">Prestamos</label><input name="prestamos" type="number"></td>
+                    </tr>
+                        <td><label for="total_deducido">Total deducido</label><input name="total_deducido" type="number"></td>
+                        <td ><label for="neto">Neto</label><input name="neto" type="number"> </td>
+                    <tr>
+                        <td><input class="button" type="submit" value="Calcular"></td>
+                        <td><input class="button" type="reset" value="Borrar"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="js/script.js"></script>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../IMG/fondo1.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <p>Nos puedes encontrar en: Cl. 18 #9-87 Tunja, Boyacá.</p>
+            </div>
+            <div>
+                <h2>CONTACTANOS</h2>
+                <div class="red-social">
+                    <a href="../include/FormularioDeContacto.php"><img src="../IMG/Contacto.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Juan Sarmiento / Andres Samaca / Andres Vargas </b> PD-PHP / Incap</small>
+        </div>
+    </footer>
+</body>
+</html>
